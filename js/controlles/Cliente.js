@@ -1,5 +1,5 @@
 class Cliente {
-	constructor(nome,email,contratante) {
+	constructor(nome,email,contratante, analise, lidar, solucao) {
 		this._nome = nome;
 		this._email = email;
 		this._empresa = empresa;
