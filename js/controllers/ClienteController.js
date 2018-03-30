@@ -40,7 +40,7 @@ class ClienteController {
 
 				//Construção div de sucesso
 				let div = document.getElementById("success");
-				let conteudo = document.createTextNode("Cadastro Realizado com Action!");
+				let conteudo = document.createTextNode("Cadastro Realizado com Sucesso!");
 				let elemento = document.createElement("div");
 				elemento.appendChild(conteudo);
 				elemento.setAttribute("class", "success");
