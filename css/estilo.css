@@ -1,0 +1,23 @@
+html,body{
+	height: 100%;
+	width: auto;
+}
+
+
+.imagens {
+	width: 100%;
+	margin: 0;
+	height: auto;
+	padding: 0;
+}
+
+.contratante,.contratado{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	border: none;
+}
+
+img{
+	border: 0;
+}
