@@ -62,7 +62,6 @@
 		</div>
 
 
-
 		<!-- Call to Action -->
 		<section class="call-to-action text-dark text-center">
 			<div class="overlay"></div>
@@ -70,21 +69,20 @@
 				<div class="row">
 					<div class="col-xl-9 mx-auto">
 						<h2 class="mb-4">Contribua para a melhoria do mercado de growth hacking. </h2>
-						<!-- <p>Preencha com seus dados:</p> -->
 					</div>
 					<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
 						<form class="form-signin dados-form" onsubmit="clienteController.adiciona(event)">
 							<div class="row">
 								<div class="col-md-6 mb-3">
 									<label for="firstName"></label>
-									<input type="text" class="form-control" id="firstName" placeholder="Nome *" value="" required>
+									<input type="text" class="form-control" id="nome" placeholder="Nome *" value="" required>
 									<div class="invalid-feedback">
 										Informe seu nome.
 									</div>
 								</div>
 								<div class="col-md-6 mb-3">
-									<label for="lastName"></label>
-									<input type="text" class="form-control" id="lastName" placeholder="Telefone" value="">
+									<label for="telefone"></label>
+									<input type="text" class="form-control" id="telefone" placeholder="Telefone" value="">
 
 								</div>
 							</div>
@@ -120,8 +118,9 @@
 									Preencha este campo.
 								</div>
 							</div>
-
+							<input type="hidden" name="perfil" value='recrutador'>
 							<button class="btn btn-lg btn-primary btn-block btn-secondary" type="submit">Contribuir</button>
+
 						</form>
 
 					</div>
