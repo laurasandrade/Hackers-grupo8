@@ -12,6 +12,9 @@ h6 {
   font-weight: 700;
 }
 
+header{
+  background-image: url('../images/banner.jpg');
+}
 .marketing .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -33,18 +36,13 @@ h6 {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   padding-top: 3rem;
   padding-bottom: 7rem;
 }
 
 .call-to-action .overlay {
   position: absolute;
-  background-color: #93d5da;
+  background-color: #dfe2e2;
   height: 100%;
   width: 100%;
   top: 0;
