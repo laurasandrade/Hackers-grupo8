@@ -4,7 +4,7 @@ class ClienteController {
 		let $ = document.querySelector.bind(document);
 		this._inputNome = $("#nome");
 		this._inputEmail = $("#email");		
-		this._inputContratante = $("#contratante");	
+		this._inputContratante = $("#perfil");	
 		this._inputAnalise = $('#FormControlTextarea1');
 		this._inputLidar = $('#FormControlTextarea2');
 		this._inputSolucao = $('#FormControlTextarea3');
@@ -20,9 +20,9 @@ class ClienteController {
 			this._inputAnalise.value,
 			this._inputLidar.value,
 			this._inputSolucao.value
-			);
+		);
 
-		// console.log(cliente);
+		console.log(cliente);
 		if(cliente !== undefined) {
 			let cont = cliente.nome.split(" ");
 			if(cont.length < 2){
@@ -32,11 +32,14 @@ class ClienteController {
 				let stringCliente = JSON.stringify(cliente);
 
 				//salvar no local storage
-				window.localStorage.setItem('cliente', stringCliente);
+				// window.localStorage.setItem('cliente', stringCliente);
 
-				//Resgatando o dado
-				let localCliente = window.localStorage.getItem('cliente', stringCliente);
-				console.log(localCliente);
+				// //Resgatando o dado
+				// let localCliente = window.localStorage.getItem('cliente', stringCliente);
+				// console.log(localCliente);
+
+				this.enviaDados(stringCliente);
+
 
 				//Construção div de sucesso
 				let div = document.getElementById("success");
@@ -49,5 +52,19 @@ class ClienteController {
 		}else {
 			console.log("erro");
 		}
+	}
+
+	enviaDados(dadosForm){
+		function reqListener () {
+	  		console.log(this.responseText);
+		};
+
+		let httpRequest = new XMLHttpRequest();
+
+		let url = "https://landingpageii-3048a.firebaseio.com/cliente.json"; 
+		httpRequest.onload = reqListener;
+		httpRequest.open("post", url, true);
+		httpRequest.setRequestHeader("Content-Type", "application/json");
+		httpRequest.send(dadosForm);
 	}
 }

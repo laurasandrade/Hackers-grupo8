@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<title>AFFLO - Contratante</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116625061-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-116625061-1');
+	</script>
+
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-dark box-shadow">
+		<h5 class="my-0 mr-md-auto font-weight-normal text-white">AFFLO</h5>
+	</div>
+
+	<header class="text-dark text-center">
+		<div class="position-relative overflow-hidden p-3 p-md-5 text-center text-white">
+			<div class="col-md-5 p-lg-5 mx-auto my-5">
+				<h1 class="display-4 font-weight-normal">Bem-vindo!</h1>
+				<a class="btn btn-light" href="#">Participe</a>
+			</div>
+			<div class="product-device box-shadow d-none d-md-block"></div>
+			<div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+		</div>
+	</header>
+
+	<div class="container marketing p-md-5">
+		
+
+		<div class="row featurette p-md-5">
+			<div class="col-md-7">
+				<p class="lead">A <span class="text-muted">Afflo </span>é uma empresa de HR Tech que está levantando um recorte do mercado brasileiro de Growth Hacking por meio de pesquisa com profissionais e recrutadores da área.</p>
+
+				<p class="lead">Agradecemos pelo seu tempo e atenção para colaborar com esse importante projeto que visa mapear as dores e dificuldades de encontrar (e validar tecnicamente) um profissional de Growth Hacking no mercado brasileiro.</p>
+
+				<p class="lead">Preenchendo a pesquisa, você poderá ter acesso a um e-book que está sendo desenvolvido com as melhores práticas para:</p>
+				<p class="lead">Participando da pesquisa, você será um dos primeiros a ter acesso a um e-book com as melhores práticas para busca, seleção e contratação do profissional especializado em Growth Hacking. </p>
+				<p class="lead">Por favor, preencha o formulário abaixo com muita atenção procurando expor com sinceridade a sua opinião e a realidade que você encontra no dia-a-dia.</p>
+			</div>
+			<div class="col-md-5">
+				<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="https://mir-s3-cdn-cf.behance.net/projects/404/960ce838244731.Y3JvcCw4MDAsNjI1LDAsMTI0.png" data-holder-rendered="true">
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Call to Action -->
+	<section class="call-to-action text-dark text-center">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-9 mx-auto">
+					<h2 class="mb-4">Contribua para a melhoria do mercado de growth hacking. </h2>
+					<div id="success"></div>
+				</div>
+				<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+					<form class="form-signin dados-form" onsubmit="clienteController.adiciona(event)">
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label for="nome"></label>
+								<input type="text" class="form-control" id="nome" placeholder="Nome *" value="" required>
+								<div class="invalid-feedback">
+									Informe seu nome.
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="telefone"></label>
+								<input type="text" class="form-control" id="telefone" placeholder="Telefone" value="">
+
+							</div>
+						</div>
+
+						<div class="mb-3">
+							<label for="email"></label>
+							<input type="email" class="form-control" id="email" placeholder="Email *" required>
+							<div class="invalid-feedback">
+								Por favor, adicione um email válido
+							</div>
+						</div>
+
+						<div class="mb-3">
+						<label for="inputAnalise" class="sr-only"></label>
+							<textarea class="form-control" id="FormControlTextarea1" rows="3" placeholder=">Você já teve problema com análise de competências técnicas dos candidatos em um processo seletivo? *" required autofocus></textarea>
+							<div class="invalid-feedback">
+								Preencha este campo.
+							</div>
+						</div>
+						<div class="mb-3">
+
+							<label for="inputLidar" class="sr-only"></label>
+							<textarea class="form-control" id="FormControlTextarea2" rows="3" placeholder="Como você lidou ou está lidando com essa situação? *" required autofocus></textarea>
+							<div class="invalid-feedback">
+								Preencha este campo.
+							</div>
+						</div>
+						<div class="mb-3">
+
+							<label for="inputSolucao" class="sr-only"></label>
+							<textarea class="form-control" id="FormControlTextarea3" rows="3" placeholder="Do seu ponto de vista, qual seria a solução ideal para resolver isso? *" required autofocus></textarea>
+							<div class="invalid-feedback">
+								Preencha este campo.
+							</div>
+						</div>
+						<input type="hidden" name="perfil" id="perfil" value="CONTRATANTE">
+						<button class="btn btn-lg btn-primary btn-block btn-secondary" type="submit">Contribuir</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+					<p class="text-muted small mb-4 mb-lg-0">&copy; 2017-2018</p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyDms63bzTytKDoHfuvfba_X2vyoGRT8o-U",
+	    authDomain: "landingpageii-3048a.firebaseapp.com",
+	    databaseURL: "https://landingpageii-3048a.firebaseio.com",
+	    projectId: "landingpageii-3048a",
+	    storageBucket: "landingpageii-3048a.appspot.com",
+	    messagingSenderId: "79183053094"
+	  };
+	  firebase.initializeApp(config);
+	  database = firebase.database();
+	</script>
+	<script src="../js/models/Cliente.js"></script>
+	<script src="../js/controllers/ClienteController.js"></script>
+	<script type="text/javascript">
+		let clienteController = new ClienteController();
+	</script>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	
+</body>
+</html>
