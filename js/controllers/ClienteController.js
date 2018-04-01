@@ -8,18 +8,21 @@ class ClienteController {
 		this._inputAnalise = $('#FormControlTextarea1');
 		this._inputLidar = $('#FormControlTextarea2');
 		this._inputSolucao = $('#FormControlTextarea3');
+		this._ip =this.pegaIPCliente();
 	}
 
 	adiciona(event) {
 		event.preventDefault();
-
+		console.log(this._ip);
+	
 		let cliente = new Cliente(
 			this._inputNome.value,
 			this._inputEmail.value,
 			this._inputContratante.value,
 			this._inputAnalise.value,
 			this._inputLidar.value,
-			this._inputSolucao.value
+			this._inputSolucao.value,
+			this._ip
 		);
 
 		console.log(cliente);
@@ -37,7 +40,7 @@ class ClienteController {
 				// //Resgatando o dado
 				// let localCliente = window.localStorage.getItem('cliente', stringCliente);
 				// console.log(localCliente);
-
+				
 				this.enviaDados(stringCliente);
 
 
@@ -63,8 +66,19 @@ class ClienteController {
 
 		let url = "https://landingpageii-3048a.firebaseio.com/cliente.json"; 
 		httpRequest.onload = reqListener;
-		httpRequest.open("post", url, true);
+		httpRequest.open("post", url,false);
 		httpRequest.setRequestHeader("Content-Type", "application/json");
 		httpRequest.send(dadosForm);
+		
 	}
+
+
+	pegaIPCliente() {
+		var xmlhttp = new XMLHttpRequest();
+  		xmlhttp.open("GET", 'http://meuip.com/api/meuip.php');
+  		xmlhttp.send();
+  		xmlhttp.onload = function(e) {
+  		    return xmlhttp.response;
+	}
+ }
 }
