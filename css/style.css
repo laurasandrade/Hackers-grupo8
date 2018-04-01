@@ -24,7 +24,9 @@ header{
     margin-right: .75rem;
     margin-left: .75rem;
 }
-
+body > footer > div > div > div > a > img{
+width: 15%;
+}
 
 @media (min-width: 768px) {
 }
