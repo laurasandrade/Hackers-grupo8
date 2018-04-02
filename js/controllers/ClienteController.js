@@ -8,6 +8,7 @@ class ClienteController {
 		this._inputAnalise = $('#FormControlTextarea1');
 		this._inputLidar = $('#FormControlTextarea2');
 		this._inputSolucao = $('#FormControlTextarea3');
+		this._inputTelefone = $('#telefone');
 		this._ip = $("#ip");
 		this._data = DateHelper.dataParaTexto(new Date());
 	}
@@ -26,6 +27,7 @@ class ClienteController {
 			this._inputAnalise.value,
 			this._inputLidar.value,
 			this._inputSolucao.value,
+			this._inputTelefone.value,
 			this._ip.value,
 			this._data
 		);
@@ -45,14 +47,15 @@ class ClienteController {
 				// //Resgatando o dado
 				// let localCliente = window.localStorage.getItem('cliente', stringCliente);
 				// console.log(localCliente);
-				
+	
 				this.enviaDados(stringCliente);
 
 
 				//Construção div de sucesso
 				let div = document.getElementById("success");
-				let conteudo = document.createTextNode("Cadastro Realizado com Sucesso!");
+				let conteudo = document.createTextNode("Cadastro Realizado com Sucesso!Muito obrigado pela colaboração!");
 				let elemento = document.createElement("div");
+				this.limpaForm();
 				elemento.appendChild(conteudo);
 				elemento.setAttribute("class", "success");
 				div.appendChild(elemento); 	
@@ -85,4 +88,16 @@ class ClienteController {
   			document.getElementById("ip").value = xmlhttp.response;	
 		}
  	}
+
+ limpaForm(){
+ 	    document.getElementById("success").textContent="";
+ 		this._inputNome.value="";
+		this._inputEmail.value = ""	;
+		this._inputContratante.value=""	
+		this._inputAnalise.value="";
+		this._inputLidar.value="";
+		this._inputSolucao.value ="";
+		this._inputTelefone.value="";
+		this._inputNome.focus();
+ }
 }

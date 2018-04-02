@@ -1,11 +1,12 @@
 class Cliente {
-	constructor(nome,email,contratante,analise,lidar,solucao,ip,data) {
+	constructor(nome,email,contratante,analise,lidar,solucao,telefone,ip,data) {
 		this._nome = nome;
 		this._email = email;
 		this._contratante = contratante;
 		this._analise = analise;
 		this._lidar = lidar;
 		this._solucao = solucao;
+		this._telefone = telefone;
 		this._ip = ip;
 		this._data = data;
 		Object.freeze(this);
@@ -33,6 +34,10 @@ class Cliente {
 
 	get solucao() {
 		return this._solucao;
+	}
+
+	get telefone(){
+		return this._telefone;
 	}
 
 	get ip() {
