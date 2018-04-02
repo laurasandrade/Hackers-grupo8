@@ -93,7 +93,6 @@ class ClienteController {
  	    document.getElementById("success").textContent="";
  		this._inputNome.value="";
 		this._inputEmail.value = ""	;
-		this._inputContratante.value=""	
 		this._inputAnalise.value="";
 		this._inputLidar.value="";
 		this._inputSolucao.value ="";
