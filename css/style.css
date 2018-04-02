@@ -42,19 +42,9 @@ width: 15%;
   padding-bottom: 7rem;
 }
 
-.call-to-action .overlay {
-  position: absolute;
-  background-color: #dfe2e2;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.3;
-}
-
 footer.footer {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .success {
   color: white;
