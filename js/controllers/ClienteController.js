@@ -8,7 +8,7 @@ class ClienteController {
 		this._inputAnalise = $('#FormControlTextarea1');
 		this._inputLidar = $('#FormControlTextarea2');
 		this._inputSolucao = $('#FormControlTextarea3');
-		this._ip =  this.pegaIPCliente();
+		this._ip = $("#ip");
 		this._data = DateHelper.dataParaTexto(new Date());
 	}
 
@@ -26,7 +26,7 @@ class ClienteController {
 			this._inputAnalise.value,
 			this._inputLidar.value,
 			this._inputSolucao.value,
-			this._ip,
+			this._ip.value,
 			this._data
 		);
 
@@ -76,19 +76,13 @@ class ClienteController {
 		httpRequest.send(dadosForm);
 		
 	}
- pegaIPCliente(){
- 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("GET", 'http://meuip.com/api/meuip.php');
-	
-	xmlhttp.onload = function(e) {
-    this._ip = xmlhttp.response;
-    xmlhttp.send();
-}
- 
- }
 
-
-
-
-
+	pegaIPCliente() {
+		let xmlhttp = new XMLHttpRequest();
+  		xmlhttp.open("GET", 'https://api.ipify.org');
+  		xmlhttp.send();
+  		xmlhttp.onload = function(e) {
+  			document.getElementById("ip").value = xmlhttp.response;	
+		}
+ 	}
 }

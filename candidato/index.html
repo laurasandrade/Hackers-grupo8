@@ -51,7 +51,7 @@
 			<!-- End Facebook Pixel Code -->
 
 		</head>
-		<body>
+		<body onload="clienteController.pegaIPCliente()">
 			<!-- Navigation -->
 			<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-dark box-shadow">
 				<h5 class="my-0 mr-md-auto font-weight-normal text-white">AFFLO</h5>
@@ -146,6 +146,7 @@
 									</div>
 								</div>
 								<input type="hidden" name="perfil" id="perfil" value="CANDIDATO">
+								<input type="hidden" name="ip" id="ip">
 								<button class="btn btn-lg btn-primary btn-block btn-secondary" type="submit">Contribuir</button>
 							</form>
 
