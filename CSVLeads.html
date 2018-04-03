@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Banco CSV</title>
+</head>
+<body>
+	<div id="dados">email,nome,ip,tipo,data_hora</div>
+
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDms63bzTytKDoHfuvfba_X2vyoGRT8o-U",
+		authDomain: "landingpageii-3048a.firebaseapp.com",
+		databaseURL: "https://landingpageii-3048a.firebaseio.com",
+		projectId: "landingpageii-3048a",
+		storageBucket: "landingpageii-3048a.appspot.com",
+		messagingSenderId: "79183053094"
+	};
+
+	firebase.initializeApp(config);
+	database = firebase.database();
+
+	var playersRef = firebase.database().ref("cliente/");
+
+	playersRef.orderByChild("_nome").on("child_added", function(data) {
+		criarDiv(data.val());
+	});
+
+	function criarDiv(valor){
+
+		// console.log(valor);
+		let elemento = document.createElement("div");
+		if(valor["_contratante"] == "CONTRATANTE"){
+			let contratante = "B2B";
+		}else {
+			contratante = "B2C"
+		}
+
+  		const concat = valor['_email'] + "," + valor["_nome"] + "," + valor["_ip"] + "," + contratante + "," + valor["_data"];
+		let div = document.getElementById("dados");
+		let conteudo = document.createTextNode(concat);
+		elemento.appendChild(conteudo);
+		div.appendChild(elemento);
+}
+	</script>
+
+</body>
+</html>
