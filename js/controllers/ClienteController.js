@@ -50,15 +50,17 @@ class ClienteController {
 	
 				this.enviaDados(stringCliente);
 
+				
+				$("#modal").modal();
 
 				//Construção div de sucesso
-				let div = document.getElementById("success");
-				let conteudo = document.createTextNode("Cadastro Realizado com Sucesso!Muito obrigado pela colaboração!");
-				let elemento = document.createElement("div");
+				//let div = document.getElementById("success");
+				//let conteudo = document.createTextNode("Cadastro Realizado com Sucesso!Muito obrigado pela colaboração!");
+				//let elemento = document.createElement("div");
 				this.limpaForm();
-				elemento.appendChild(conteudo);
-				elemento.setAttribute("class", "success");
-				div.appendChild(elemento); 	
+				//elemento.appendChild(conteudo);
+				//elemento.setAttribute("class", "success");
+				//div.appendChild(elemento); 	
 			}
 		}else {
 			console.log("erro");
@@ -74,7 +76,7 @@ class ClienteController {
 
 		let url = "https://landingpageii-3048a.firebaseio.com/cliente.json"; 
 		httpRequest.onload = reqListener;
-		httpRequest.open("post", url,false);
+		httpRequest.open("post", url,true);
 		httpRequest.setRequestHeader("Content-Type", "application/json");
 		httpRequest.send(dadosForm);
 		
@@ -90,7 +92,7 @@ class ClienteController {
  	}
 
  limpaForm(){
- 	    document.getElementById("success").textContent="";
+ 	    //document.getElementById("success").textContent="";
  		this._inputNome.value="";
 		this._inputEmail.value = ""	;
 		this._inputAnalise.value="";
@@ -99,4 +101,8 @@ class ClienteController {
 		this._inputTelefone.value="";
 		this._inputNome.focus();
  }
+
+
+ 	
+ 
 }

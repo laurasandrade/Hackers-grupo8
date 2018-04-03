@@ -69,5 +69,15 @@ footer.footer {
   padding-bottom: 2rem;
 }
 .success {
-  color: white;
+  color: red;
+}
+
+p{
+  line-height: 2;
+  text-align: justify;
+
+}
+
+.titulo-modal{
+  text-align: center;
 }
