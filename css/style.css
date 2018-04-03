@@ -13,19 +13,41 @@ h6 {
 }
 
 header{
-  background-image: url('../images/banner.jpg');
+  background-image: url('../images/banner.jpg'); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
+body > header h1{
+  text-shadow: 2px 2px 4px #000000;
+}
+
 .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
+  margin-right: .75rem;
+  margin-left: .75rem;
 }
 body > footer > div > div > div > a > img{
-width: 15%;
+  width: 15%;
+}
+
+.btn-outline-info {
+  color: #fff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #fff;
+}
+#formulario button{
+  background-color: #93dad5;
+  color: #fff;
 }
 
 @media (min-width: 768px) {
