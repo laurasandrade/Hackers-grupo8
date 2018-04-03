@@ -24,10 +24,11 @@ Laura Andrade:
 - Adicionou as tags (hotjar, facebook pixel code, hubspot, analytics e webmaster).
 
 Matheus: 
-- Configurações de arquivos de csv
-- Participação na persistência com firebase;
+- Configurações de arquivos e geração dos dados csv
+- Criação e configuração dos arquivos do Firebase.
+- Estrutura base dos arquivos JavaScript;
 - Configurações do servidor e deploy;
-- Terminei funcionalidade de salvar o ip no firebase;
-- Criação e configuração dos arquivos.
+- Funcionalidade completa de salvar o ip no firebase;
+
 
 
